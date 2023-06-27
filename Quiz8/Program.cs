@@ -1,7 +1,10 @@
+using Quiz8.Ripository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddScoped<IUserRipository,UserRipository>();
 
 var app = builder.Build();
 
